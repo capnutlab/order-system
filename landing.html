@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>注文書納期管理システム - 使いやすく、分かりやすい納期管理</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&display=swap');
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+        }
+        .screenshot {
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+            display: block;
+            height: auto;
+            max-width: 100%;
+        }
+        .screenshot-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .feature-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .feature-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-slate-50">
+    <!-- ヘッダー -->
+    <header class="bg-white border-b border-slate-200 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div>
+                    <h1 class="text-xl font-semibold text-slate-900">注文書納期管理</h1>
+                    <p class="text-xs text-slate-500">Order Deadline Management System</p>
+                </div>
+                <a href="/app" class="px-6 py-2 bg-slate-900 text-white text-sm hover:bg-slate-800 rounded">アプリを開く</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ヒーローセクション -->
+    <section class="max-w-7xl mx-auto px-6 pt-16 pb-8">
+        <div class="text-center mb-12">
+            <h2 class="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
+                使いやすく、分かりやすい<br>納期管理システム
+            </h2>
+            <p class="text-xl text-slate-600 mb-8 max-w-2xl mx-auto">
+                注文管理を効率化し、納期遅延を防ぐ。直感的な操作で誰でも簡単に使える注文書納期管理システムです。
+            </p>
+            <div class="flex justify-center gap-4">
+                <a href="/app" class="px-8 py-3 bg-slate-900 text-white font-medium hover:bg-slate-800 rounded">
+                    今すぐ使う
+                </a>
+            </div>
+        </div>
+
+        <!-- メインスクリーンショット -->
+        <div class="mt-0 screenshot-container">
+            <img src="images/main-dashboard.png" alt="メインダッシュボード" class="screenshot" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+            <div class="bg-white p-16 text-center text-slate-400 screenshot" style="display: none;">
+                <p class="text-lg">メインダッシュボードのスクリーンショット</p>
+                <p class="text-sm mt-2">images/main-dashboard.png を配置してください</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 主要機能セクション -->
+    <section class="bg-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-6">
+            <h3 class="text-3xl font-bold text-slate-900 text-center mb-12">主な機能</h3>
+            
+            <div class="grid md:grid-cols-2 gap-8 mb-12">
+                <!-- 機能1: 5件一括登録 -->
+                <div class="feature-card bg-white border border-slate-200 rounded-lg p-6">
+                    <div class="mb-3 screenshot-container">
+                        <img src="images/feature-bulk-registration.png" alt="5件一括登録" class="screenshot rounded" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <div class="bg-slate-100 p-8 text-center text-slate-400 screenshot rounded" style="display: none;">
+                            <p>5件一括登録画面</p>
+                            <p class="text-xs mt-2">images/feature-bulk-registration.png</p>
+                        </div>
+                    </div>
+                    <h4 class="text-xl font-semibold text-slate-900 mb-2">5件一括登録</h4>
+                    <p class="text-slate-600 mb-4">
+                        注文番号・顧客名・納期を1回入力するだけで、5件の注文を一度に登録できます。材質・サイズ・数量だけを個別に入力するため、効率的に作業が進められます。
+                    </p>
+                    <ul class="text-sm text-slate-500 space-y-1">
+                        <li>✓ 共通項目を1回だけ入力</li>
+                        <li>✓ 材質・サイズ・数量を個別に入力</li>
+                        <li>✓ 空の行は自動でスキップ</li>
+                    </ul>
+                </div>
+
+                <!-- 機能2: 納期アラート -->
+                <div class="feature-card bg-white border border-slate-200 rounded-lg p-6">
+                    <div class="mb-3 screenshot-container">
+                        <img src="images/feature-deadline-alert.png" alt="納期アラート" class="screenshot rounded" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <div class="bg-slate-100 p-8 text-center text-slate-400 screenshot rounded" style="display: none;">
+                            <p>納期アラート表示</p>
+                            <p class="text-xs mt-2">images/feature-deadline-alert.png</p>
+                        </div>
+                    </div>
+                    <h4 class="text-xl font-semibold text-slate-900 mb-2">納期アラート機能</h4>
+                    <p class="text-slate-600 mb-4">
+                        納期が近づいた注文を自動で検出し、視覚的に警告表示します。色分けにより、緊急度が一目で分かります。
+                    </p>
+                    <ul class="text-sm text-slate-500 space-y-1">
+                        <li>✓ 納期7日以内を自動検出</li>
+                        <li>✓ 色分けで緊急度を表示</li>
+                        <li>✓ 遅延注文も明確に表示</li>
+                    </ul>
+                </div>
+
+                <!-- 機能3: マスタ管理 -->
+                <div class="feature-card bg-white border border-slate-200 rounded-lg p-6">
+                    <div class="mb-3 screenshot-container">
+                        <img src="images/feature-master-management.png" alt="マスタ管理" class="screenshot rounded" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <div class="bg-slate-100 p-8 text-center text-slate-400 screenshot rounded" style="display: none;">
+                            <p>マスタ管理画面</p>
+                            <p class="text-xs mt-2">images/feature-master-management.png</p>
+                        </div>
+                    </div>
+                    <h4 class="text-xl font-semibold text-slate-900 mb-2">マスタ管理</h4>
+                    <p class="text-slate-600 mb-4">
+                        よく使う顧客名・商品名（サイズ）・材質を事前に登録しておけば、入力時に候補から選択できます。
+                    </p>
+                    <ul class="text-sm text-slate-500 space-y-1">
+                        <li>✓ 顧客名・商品名・材質を登録</li>
+                        <li>✓ 候補から簡単選択</li>
+                        <li>✓ 順序の並び替えも可能</li>
+                    </ul>
+                </div>
+
+                <!-- 機能4: カスタムドロップダウン -->
+                <div class="feature-card bg-white border border-slate-200 rounded-lg p-6">
+                    <div class="mb-3 screenshot-container">
+                        <img src="images/feature-dropdown.png" alt="カスタムドロップダウン" class="screenshot rounded" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <div class="bg-slate-100 p-8 text-center text-slate-400 screenshot rounded" style="display: none;">
+                            <p>ドロップダウン表示</p>
+                            <p class="text-xs mt-2">images/feature-dropdown.png</p>
+                        </div>
+                    </div>
+                    <h4 class="text-xl font-semibold text-slate-900 mb-2">全候補表示ドロップダウン</h4>
+                    <p class="text-slate-600 mb-4">
+                        ブラウザに依存せず、登録済みの全候補を表示します。入力内容で自動フィルタリングされ、すぐに見つけられます。
+                    </p>
+                    <ul class="text-sm text-slate-500 space-y-1">
+                        <li>✓ 全候補を確実に表示</li>
+                        <li>✓ リアルタイムでフィルタリング</li>
+                        <li>✓ PC環境に依存しない</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 使いやすさのポイント -->
+    <section class="pt-8 pb-16">
+        <div class="max-w-7xl mx-auto px-6">
+            <h3 class="text-3xl font-bold text-slate-900 text-center mb-12">なぜ使いやすいのか</h3>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-slate-900 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl text-white">📋</span>
+                    </div>
+                    <h4 class="text-lg font-semibold text-slate-900 mb-2">直感的な操作</h4>
+                    <p class="text-slate-600 text-sm">
+                        複雑な設定は不要。必要な情報を入力するだけで、すぐに使い始められます。
+                    </p>
+                </div>
+
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-slate-900 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl text-white">🎨</span>
+                    </div>
+                    <h4 class="text-lg font-semibold text-slate-900 mb-2">視覚的な管理</h4>
+                    <p class="text-slate-600 text-sm">
+                        色分けとアイコンで、注文の状態や緊急度が一目で分かります。
+                    </p>
+                </div>
+
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-slate-900 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl text-white">⚡</span>
+                    </div>
+                    <h4 class="text-lg font-semibold text-slate-900 mb-2">効率的な入力</h4>
+                    <p class="text-slate-600 text-sm">
+                        5件一括登録とマスタ機能で、入力作業を大幅に短縮できます。
+                    </p>
+                </div>
+            </div>
+
+            <!-- 詳細画面のスクリーンショット -->
+            <div class="mt-8">
+                <div class="screenshot-container">
+                    <img src="images/detail-modal.png" alt="詳細画面" class="screenshot" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <div class="bg-white p-16 text-center text-slate-400 screenshot" style="display: none;">
+                        <p class="text-lg">注文詳細画面</p>
+                        <p class="text-sm mt-2">images/detail-modal.png を配置してください</p>
+                    </div>
+                </div>
+                <p class="text-center text-slate-500 text-sm mt-3">注文の詳細情報を確認・編集できます</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 一覧画面の詳細 -->
+    <section class="bg-white pt-8 pb-16">
+        <div class="max-w-7xl mx-auto px-6">
+            <h3 class="text-3xl font-bold text-slate-900 text-center mb-8">注文一覧画面</h3>
+            <p class="text-center text-slate-600 mb-12 max-w-2xl mx-auto">
+                全ての注文を一覧で確認。納期に応じて自動で色分けされ、進行中と完了を分けて表示します。
+            </p>
+            
+            <div class="mb-6 screenshot-container">
+                <img src="images/order-list.png" alt="注文一覧" class="screenshot" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <div class="bg-white p-16 text-center text-slate-400 screenshot" style="display: none;">
+                    <p class="text-lg">注文一覧画面</p>
+                    <p class="text-sm mt-2">images/order-list.png を配置してください</p>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+                <div class="bg-red-50 border border-red-200 rounded p-4 text-center">
+                    <div class="text-red-600 font-semibold mb-1">遅延</div>
+                    <div class="text-xs text-slate-600">納期を過ぎた注文</div>
+                </div>
+                <div class="bg-orange-50 border border-orange-200 rounded p-4 text-center">
+                    <div class="text-orange-600 font-semibold mb-1">緊急</div>
+                    <div class="text-xs text-slate-600">納期3日以内</div>
+                </div>
+                <div class="bg-yellow-50 border border-yellow-200 rounded p-4 text-center">
+                    <div class="text-yellow-600 font-semibold mb-1">注意</div>
+                    <div class="text-xs text-slate-600">納期7日以内</div>
+                </div>
+                <div class="bg-white border border-slate-200 rounded p-4 text-center">
+                    <div class="text-slate-600 font-semibold mb-1">通常</div>
+                    <div class="text-xs text-slate-600">納期に余裕あり</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTAセクション -->
+    <section class="py-16">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h3 class="text-3xl font-bold text-slate-900 mb-4">今すぐ始めましょう</h3>
+            <p class="text-xl text-slate-600 mb-8">
+                面倒な納期管理から解放され、効率的に注文を管理できます。
+            </p>
+            <a href="/app" class="inline-block px-8 py-4 bg-slate-900 text-white font-semibold hover:bg-slate-800 rounded-lg text-lg">
+                無料で使う
+            </a>
+        </div>
+    </section>
+
+    <!-- フッター -->
+    <footer class="bg-slate-900 text-white py-8">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <p class="text-slate-400 text-sm">注文書納期管理システム © 2024</p>
+        </div>
+    </footer>
+</body>
+</html>
+
+
