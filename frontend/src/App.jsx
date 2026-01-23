@@ -542,27 +542,7 @@ const API_URL = `http://${window.location.hostname}:3001/api`;
     }
   };
 
- // 初回読み込み
- useEffect(() => {
-   const loadData = async () => {
-     try {
-       // 注文データをサーバーから取得
-       const orderRes = await fetch(`${API_URL}/orders`);
-       const orderData = await orderRes.json();
-       setOrders(orderData || []);
-
-       // マスタデータをサーバーから取得
-       const masterRes = await fetch(`${API_URL}/masters`);
-       const masterData = await masterRes.json();
-       setMasters(masterData || { clients: [], products: [], materials: [] });
-     } catch (error) {
-       console.error('初回読み込みエラー:', error);
-     }
-   };
-   loadData();
- }, []);
-
- // 更新ボタンを押した時の処理
+  // 更新ボタンを押した時の処理
  const refreshData = async () => {
    try {
      const orderRes = await fetch(`${API_URL}/orders`);
