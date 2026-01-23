@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Calendar, AlertTriangle, CheckCircle, X, FileText, Plus, ChevronUp, ChevronDown, Eye, RefreshCw, Edit3, Trash2 } from 'lucide-react';
+import DocumentProgressIcon from './components/DocumentProgressIcon';
 
 const ORDER_STATUS = {
   IN_PROGRESS: '進行中',
@@ -711,9 +712,17 @@ const API_URL = `http://${window.location.hostname}:3001/api`;
       <div className="max-w-full mx-auto">
         <div className="bg-white border border-slate-200 mb-6">
           <div className="flex justify-between items-center p-6 border-b border-slate-200">
-            <div>
-              <h1 className="text-2xl font-semibold text-slate-900 tracking-tight">注文書納期管理</h1>
-              <p className="text-sm text-slate-500 mt-1">Order Deadline Management System</p>
+            <div className="flex items-center gap-3">
+              <DocumentProgressIcon 
+                size={32} 
+                progressColor="#1e293b"
+                documentColor="#0f172a"
+                backgroundColor="#cbd5e1"
+              />
+              <div>
+                <h1 className="text-2xl font-semibold text-slate-900 tracking-tight">注文書納期管理</h1>
+                <p className="text-sm text-slate-500 mt-1">Order Deadline Management System</p>
+              </div>
             </div>
             <button onClick={refreshData} className="px-4 py-2 border border-slate-300 text-slate-700 text-sm hover:bg-slate-50 flex items-center gap-2">
               <RefreshCw size={16} />
